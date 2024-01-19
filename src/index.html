@@ -10,6 +10,16 @@
 </head>
 
 <body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <div>
+            <input type="text" size="25" placeholder="Digit for generate" v-model="text">
+        </div>
+
+        <div v-if="text" class="output">
+            <img :src="newQRCode" alt="QRCode">
+        </div>
+    </div>
 
     <script src="js/builder.js"></script>
 </body>
